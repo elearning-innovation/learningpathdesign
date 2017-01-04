@@ -163,35 +163,37 @@ a {
 }
 
 // Commence Custom CSS
-.sub-carousel {
-  border:1px solid $darkgray;
-  padding:0 !important;
+.page {
+  .sub-carousel {
+    border:1px solid $darkgray;
+    padding:0 !important;
 
-  header {
-    height: 40px;
-    background-color: $darkgray;
-    color: $white;
-    margin-bottom: 20px;
-  }
+    header {
+      height: 40px;
+      background-color: $darkgray;
+      color: $white;
+      margin-bottom: 20px;
+    }
 
-  .carousel-inner {
-    padding:10px;
-  }
+    .carousel-inner {
+      padding:10px;
+    }
 
-  footer {
-    text-align: center;
-    padding-top: 10px;
+    footer {
+      text-align: center;
+      padding-top: 10px;
 
-    a {
-      text-decoration:none;
-      color:$lightgray;
+      a {
+        text-decoration:none;
+        color:$lightgray;
 
-      &.previous-slide {
-        margin-right:60px;
-      }
+        &.previous-slide {
+          margin-right:60px;
+        }
 
-      i {
-        font-size: 2em;
+        i {
+          font-size: 2em;
+        }
       }
     }
   }
@@ -230,111 +232,111 @@ a {
 
   &.sub-topic {
     margin-bottom:20px;
+  }
+
+  aside .wrap, .main-content .wrap {
+    border: 1px solid $lightgray;
+    border-radius:2px;
+  }
+
+
+  @media screen and (max-width: 991px) {
+    .nav-tabs li {
+      float:none;
     }
+  }
 
-    aside .wrap, .main-content .wrap {
-      border: 1px solid $lightgray;
-      border-radius:2px;
-    }
-
-
-    @media screen and (max-width: 991px) {
-      .nav-tabs li {
-        float:none;
-      }
-    }
-
-    @media screen and (min-width: 992px) {
-      aside .wrap {
-        border-right:0;
-      }
-    }
-
+  @media screen and (min-width: 992px) {
     aside .wrap {
-      padding-top:15px !important;
+      border-right:0;
+    }
+  }
 
-      border-top-right-radius: 0;
-      padding:0;
-      margin-bottom:10px;
+  aside .wrap {
+    padding-top:15px !important;
 
-      hr {
-        margin-left:3px;
-        margin-right:3px;
-      }
+    border-top-right-radius: 0;
+    padding:0;
+    margin-bottom:10px;
 
-      ul {
+    hr {
+      margin-left:3px;
+      margin-right:3px;
+    }
 
-        padding-left:0;
+    ul {
 
-        li {
-          padding-left:10px;
-          margin-bottom:10px;
-          list-style-type:none;
+      padding-left:0;
 
-          &.active {
-            background-color:$lightblue;
-            padding-bottom:5px;
-            padding-top:5px;
-            a {
-              color:#000;
-            }
-          }
+      li {
+        padding-left:10px;
+        margin-bottom:10px;
+        list-style-type:none;
 
+        &.active {
+          background-color:$lightblue;
+          padding-bottom:5px;
+          padding-top:5px;
           a {
-            color:$lightgray;
-            text-decoration:none;
+            color:#000;
+          }
+        }
+
+        a {
+          color:$lightgray;
+          text-decoration:none;
+        }
+      }
+    }
+  }
+
+  .main-content .wrap {
+    border-top-left-radius:0;
+    padding:0 2px;
+
+    header {
+      padding:10px;
+      padding-bottom:5px;
+      border-bottom:1px solid $lightgray;
+    }
+
+    main {
+      margin-top:5px;
+      min-height:408px;
+
+      h2, h3 {
+        color:$lightblue;
+      }
+    }
+  }
+
+  &.sub-topic-carousel {
+    footer {
+      border-top:1px solid $lightgray;
+      min-height:50px;
+      nav {
+        float:right;
+        margin-top:15px;
+        margin-right:15px;
+
+        a {
+          color:$lightgray;
+          display:block;
+          float:left;
+
+          &.left {
+            border-right:1px solid $lightgray;
+            padding-right:5px;
+            margin-right:5px;
+          }
+
+          i {
+            font-size:10pt;
           }
         }
       }
     }
-
-    .main-content .wrap {
-      border-top-left-radius:0;
-      padding:0 2px;
-
-      header {
-        padding:10px;
-        padding-bottom:5px;
-        border-bottom:1px solid $lightgray;
-      }
-
-      main {
-        margin-top:5px;
-        min-height:408px;
-
-        h2, h3 {
-          color:$lightblue;
-        }
-      }
-    }
-
-    &.sub-topic-carousel {
-      footer {
-        border-top:1px solid $lightgray;
-        min-height:50px;
-        nav {
-          float:right;
-          margin-top:15px;
-          margin-right:15px;
-
-          a {
-            color:$lightgray;
-            display:block;
-            float:left;
-
-            &.left {
-              border-right:1px solid $lightgray;
-              padding-right:5px;
-              margin-right:5px;
-            }
-
-            i {
-              font-size:10pt;
-            }
-          }
-        }
-      }
-    }
+  }
 
   i.fa {
     font-size:14pt;
