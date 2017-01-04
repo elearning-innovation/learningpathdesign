@@ -48,7 +48,11 @@ var Presentation = function (_React$Component) {
           null,
           'Example'
         ),
-        _react2.default.createElement('div', { id: 'sub-carousel', className: 'carousel sub-carousel slide', 'data-ride': 'carousel' })
+        _react2.default.createElement(
+          'div',
+          { id: 'sub-carousel', className: 'carousel sub-carousel slide', 'data-ride': 'carousel' },
+          'testing'
+        )
       );
     }
   }]);

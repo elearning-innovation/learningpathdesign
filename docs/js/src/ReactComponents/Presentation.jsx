@@ -8,6 +8,7 @@ class Presentation extends React.Component {
         <h1>Presentation</h1>
         <h2>Example</h2>
         <div id="sub-carousel" className="carousel sub-carousel slide" data-ride="carousel">
+          testing
         </div>
       </div>
     )
