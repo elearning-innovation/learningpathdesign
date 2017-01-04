@@ -29,6 +29,10 @@ p {
 hr {
   font-size: 1pt; }
 
+.carousel-indicators {
+  display: none;
+  visibility: hidden; }
+
 blockquote {
   border: 0;
   padding-bottom: 10px; }
@@ -69,7 +73,7 @@ section.block {
       margin-bottom: 20px; }
 
 @media screen and (min-width: 992px) {
-  section .block {
+  section.block {
     margin-right: -15px !important;
     border-radius: 5px 0 0 5px !important; } }
 .row.no-gutters {
@@ -90,6 +94,26 @@ a:hover, a:visited {
   display: -ms-flexbox;
   display: flex; }
 
+.page .sub-carousel {
+  border: 1px solid #666b74;
+  padding: 0 !important; }
+  .page .sub-carousel header {
+    height: 40px;
+    background-color: #666b74;
+    color: #ffffff;
+    margin-bottom: 20px; }
+  .page .sub-carousel .carousel-inner {
+    padding: 10px; }
+  .page .sub-carousel footer {
+    text-align: center;
+    padding-top: 10px; }
+    .page .sub-carousel footer a {
+      text-decoration: none;
+      color: #999999; }
+      .page .sub-carousel footer a.previous-slide {
+        margin-right: 60px; }
+      .page .sub-carousel footer a i {
+        font-size: 2em; }
 .page aside .block h4 {
   padding-top: 15px; }
 .page .carousel {
@@ -139,7 +163,8 @@ a:hover, a:visited {
         .page aside .wrap ul li.active a {
           color: #000; }
       .page aside .wrap ul li a {
-        color: #999999; }
+        color: #999999;
+        text-decoration: none; }
 .page .main-content .wrap {
   border-top-left-radius: 0;
   padding: 0 2px; }
@@ -150,8 +175,8 @@ a:hover, a:visited {
   .page .main-content .wrap main {
     margin-top: 5px;
     min-height: 408px; }
-    .page .main-content .wrap main h2 {
-      margin-left: 15px; }
+    .page .main-content .wrap main h2, .page .main-content .wrap main h3 {
+      color: #96c5d8; }
 .page.sub-topic-carousel footer {
   border-top: 1px solid #999999;
   min-height: 50px; }
@@ -271,7 +296,7 @@ a:hover, a:visited {
     .page main .panel .panel-heading {
       border-radius: 0;
       background: none; }
-      .page main .panel .panel-heading h4 {
+      .page main .panel .panel-heading h4, .page main .panel .panel-heading h2 {
         color: #ffffff; }
       .page main .panel .panel-heading.collapsed {
         background-color: #6ea3bb; }

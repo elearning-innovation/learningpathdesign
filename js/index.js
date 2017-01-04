@@ -1,16 +1,15 @@
-
 // Init
 $('.sub-topic').hide();
 
 // Events
-$('.sub-topics footer a').click(function(e) {
+$('.sub-topics footer a').click(function (e) {
     e.preventDefault();
     var subtopic_container = "#" + $(this).data('subtopic');
     $('.top-level').fadeOut('slow');
     $(subtopic_container).fadeIn('slow');
 });
 
-$('.sub-topic .home').click(function(e) {
+$('.sub-topic .home').click(function (e) {
     e.preventDefault();
     $(this).closest('.sub-topic').fadeOut('slow');
     $('.top-level').fadeIn('slow');
@@ -18,7 +17,7 @@ $('.sub-topic .home').click(function(e) {
 
 // Code to toggle the hamburger menu
 
-$('.side-menu-toggle').click(function(e) {
+$('.side-menu-toggle').click(function (e) {
     e.preventDefault();
     var shell_container = $(this).closest('.container');
     console.log('Side Menu');
@@ -38,19 +37,39 @@ $('.side-menu-toggle').click(function(e) {
     }
 });
 
+$('.sub-topic aside a').click(function () {
+    $(this).parent().siblings().each(function () {
+        $(this).removeClass('active');
+    });
+    $(this).parent().addClass('active');
+});
+
+$('.sub-topic-accordion .panel .panel-title a').each(function () {
+    $(this).on('click', function () {
+        var href = $(this).attr('href');
+
+        $(this).closest('.container').find('aside li').each(function () {
+            $(this).removeClass('active');
+            if ($(this).find('a').attr('href') == href) {
+                $(this).addClass('active');
+            }
+        });
+    });
+});
+
 $('.toggle').on('click', function (e) {
     e.preventDefault();
     var shell_container = $(this).closest('.container');
     if ($(shell_container).find('.panel-group').hasClass('fully-expanded')) {
         $(shell_container).find('.panel-group').removeClass('fully-expanded');
-        $(shell_container).find('.panel-collapse').each(function() {
+        $(shell_container).find('.panel-collapse').each(function () {
             $(this).collapse('hide');
         });
         $(this).find('i').removeClass('fa-angle-double-up');
         $(this).find('i').addClass('fa-angle-double-down');
     } else {
         $(shell_container).find('.panel-group').addClass('fully-expanded');
-        $(shell_container).find('.panel-collapse').each(function() {
+        $(shell_container).find('.panel-collapse').each(function () {
             $(this).collapse('show');
         });
         $(this).find('i').removeClass('fa-angle-double-down');
@@ -61,11 +80,11 @@ $('.toggle').on('click', function (e) {
 // Set all the panel headings to the dark blue background
 togglePanelHeading();
 function togglePanelHeading() {
-        $('.panel-heading').addClass('collapsed');
+    $('.panel-heading').addClass('collapsed');
     $('.collapse').prev().removeClass('expanded');
     $('.collapse.in').prev().addClass('expanded');
 }
 
-$('.collapse').on('shown.bs.collapse', function() {
+$('.collapse').on('shown.bs.collapse', function () {
     togglePanelHeading();
 });

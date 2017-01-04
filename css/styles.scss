@@ -67,6 +67,11 @@ hr {
   font-size: 1pt;
 }
 
+.carousel-indicators {
+  display:none;
+  visibility:hidden;
+}
+
 blockquote {
   border:0;
   padding-bottom:10px;
@@ -122,7 +127,7 @@ section.block {
 }
 
 @media screen and (min-width: 992px) {
-  section .block {
+  section.block {
     margin-right: -15px !important;
     border-radius: 5px 0 0 5px !important;
   }
@@ -159,6 +164,39 @@ a {
 
 // Commence Custom CSS
 .page {
+  .sub-carousel {
+    border:1px solid $darkgray;
+    padding:0 !important;
+
+    header {
+      height: 40px;
+      background-color: $darkgray;
+      color: $white;
+      margin-bottom: 20px;
+    }
+
+    .carousel-inner {
+      padding:10px;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 10px;
+
+      a {
+        text-decoration:none;
+        color:$lightgray;
+
+        &.previous-slide {
+          margin-right:60px;
+        }
+
+        i {
+          font-size: 2em;
+        }
+      }
+    }
+  }
 
   aside .block h4 {
     padding-top:15px;
@@ -202,11 +240,11 @@ a {
     }
 
 
-  @media screen and (max-width: 991px) {
-    .nav-tabs li {
-      float:none;
+    @media screen and (max-width: 991px) {
+      .nav-tabs li {
+        float:none;
+      }
     }
-  }
 
     @media screen and (min-width: 992px) {
       aside .wrap {
@@ -246,6 +284,7 @@ a {
 
           a {
             color:$lightgray;
+            text-decoration:none;
           }
         }
       }
@@ -265,8 +304,8 @@ a {
         margin-top:5px;
         min-height:408px;
 
-        h2 {
-          margin-left:15px;
+        h2, h3 {
+          color:$lightblue;
         }
       }
     }
@@ -405,7 +444,7 @@ a {
         border-radius:0;
         background: none;
 
-        h4 {
+        h4, h2 {
           color: $white;
         }
 
