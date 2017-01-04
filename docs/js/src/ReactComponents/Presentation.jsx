@@ -9,8 +9,8 @@ class Presentation extends React.Component {
         <h2>Example</h2>
         <div id="sub-carousel" className="carousel sub-carousel slide" data-ride="carousel">
           <header>Presentation Format</header>
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
+          <div className="carousel-inner" role="listbox">
+            <div className="item active">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
                 deserunt exercitationem facilis nisi officia reiciendis sequi voluptate
                 voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro
@@ -21,7 +21,7 @@ class Presentation extends React.Component {
                 iusto labore neque, nulla quasi qui repellat rerum saepe veritatis
                 voluptas.</p>
             </div>
-            <div class="item">
+            <div className="item">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
                 deserunt exercitationem facilis nisi officia reiciendis sequi voluptate
                 voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro
@@ -34,13 +34,13 @@ class Presentation extends React.Component {
             </div>
           </div>
           <footer>
-            <a class="previous-slide" href="#sub-carousel" role="button" data-slide="prev">
-              <i class="fa fa-angle-left" aria-hidden="true"></i>
-              <span class="sr-only">Previous</span>
+            <a className="previous-slide" href="#sub-carousel" role="button" data-slide="prev">
+              <i className="fa fa-angle-left" aria-hidden="true"></i>
+              <span className="sr-only">Previous</span>
             </a>
-            <a class="next-slide" href="#sub-carousel" role="button" data-slide="next">
-              <i class="fa fa-angle-right" aria-hidden="true"></i>
-              <span class="sr-only">Next</span>
+            <a className="next-slide" href="#sub-carousel" role="button" data-slide="next">
+              <i className="fa fa-angle-right" aria-hidden="true"></i>
+              <span className="sr-only">Next</span>
             </a>
           </footer>
         </div>

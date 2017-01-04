@@ -163,37 +163,35 @@ a {
 }
 
 // Commence Custom CSS
-.page {
-  .sub-carousel {
-    border:1px solid $darkgray;
-    padding:0 !important;
+.sub-carousel {
+  border:1px solid $darkgray;
+  padding:0 !important;
 
-    header {
-      height: 40px;
-      background-color: $darkgray;
-      color: $white;
-      margin-bottom: 20px;
-    }
+  header {
+    height: 40px;
+    background-color: $darkgray;
+    color: $white;
+    margin-bottom: 20px;
+  }
 
-    .carousel-inner {
-      padding:10px;
-    }
+  .carousel-inner {
+    padding:10px;
+  }
 
-    footer {
-      text-align: center;
-      padding-top: 10px;
+  footer {
+    text-align: center;
+    padding-top: 10px;
 
-      a {
-        text-decoration:none;
-        color:$lightgray;
+    a {
+      text-decoration:none;
+      color:$lightgray;
 
-        &.previous-slide {
-          margin-right:60px;
-        }
+      &.previous-slide {
+        margin-right:60px;
+      }
 
-        i {
-          font-size: 2em;
-        }
+      i {
+        font-size: 2em;
       }
     }
   }

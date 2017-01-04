@@ -58,10 +58,10 @@ var Presentation = function (_React$Component) {
           ),
           _react2.default.createElement(
             'div',
-            { 'class': 'carousel-inner', role: 'listbox' },
+            { className: 'carousel-inner', role: 'listbox' },
             _react2.default.createElement(
               'div',
-              { 'class': 'item active' },
+              { className: 'item active' },
               _react2.default.createElement(
                 'p',
                 null,
@@ -75,7 +75,7 @@ var Presentation = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { 'class': 'item' },
+              { className: 'item' },
               _react2.default.createElement(
                 'p',
                 null,
@@ -93,21 +93,21 @@ var Presentation = function (_React$Component) {
             null,
             _react2.default.createElement(
               'a',
-              { 'class': 'previous-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'prev' },
-              _react2.default.createElement('i', { 'class': 'fa fa-angle-left', 'aria-hidden': 'true' }),
+              { className: 'previous-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'prev' },
+              _react2.default.createElement('i', { className: 'fa fa-angle-left', 'aria-hidden': 'true' }),
               _react2.default.createElement(
                 'span',
-                { 'class': 'sr-only' },
+                { className: 'sr-only' },
                 'Previous'
               )
             ),
             _react2.default.createElement(
               'a',
-              { 'class': 'next-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'next' },
-              _react2.default.createElement('i', { 'class': 'fa fa-angle-right', 'aria-hidden': 'true' }),
+              { className: 'next-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'next' },
+              _react2.default.createElement('i', { className: 'fa fa-angle-right', 'aria-hidden': 'true' }),
               _react2.default.createElement(
                 'span',
-                { 'class': 'sr-only' },
+                { className: 'sr-only' },
                 'Next'
               )
             )
