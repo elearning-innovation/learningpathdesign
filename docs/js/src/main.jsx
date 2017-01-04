@@ -1,7 +1,6 @@
 
 // Load jQuery
-import $ from 'jquery'
-var jQuery = $ // needed for the bootstrap file
+import jQuery from 'jquery'
 
 // Load Bootstrap JS
 import './bootstrap'
