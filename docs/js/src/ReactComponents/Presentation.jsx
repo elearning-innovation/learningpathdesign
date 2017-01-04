@@ -8,7 +8,41 @@ class Presentation extends React.Component {
         <h1>Presentation</h1>
         <h2>Example</h2>
         <div id="sub-carousel" className="carousel sub-carousel slide" data-ride="carousel">
-          testing
+          <header>Presentation Format</header>
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                deserunt exercitationem facilis nisi officia reiciendis sequi voluptate
+                voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro
+                quaerat. Architecto, blanditiis.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid
+                architecto aut delectus deserunt doloribus esse expedita fuga ipsam
+                iusto labore neque, nulla quasi qui repellat rerum saepe veritatis
+                voluptas.</p>
+            </div>
+            <div class="item">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda
+                deserunt exercitationem facilis nisi officia reiciendis sequi voluptate
+                voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro
+                quaerat. Architecto, blanditiis.</p>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid
+                architecto aut delectus deserunt doloribus esse expedita fuga ipsam
+                iusto labore neque, nulla quasi qui repellat rerum saepe veritatis
+                voluptas.</p>
+            </div>
+          </div>
+          <footer>
+            <a class="previous-slide" href="#sub-carousel" role="button" data-slide="prev">
+              <i class="fa fa-angle-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="next-slide" href="#sub-carousel" role="button" data-slide="next">
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
+            </a>
+          </footer>
         </div>
       </div>
     )

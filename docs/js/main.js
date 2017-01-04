@@ -51,7 +51,67 @@ var Presentation = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { id: 'sub-carousel', className: 'carousel sub-carousel slide', 'data-ride': 'carousel' },
-          'testing'
+          _react2.default.createElement(
+            'header',
+            null,
+            'Presentation Format'
+          ),
+          _react2.default.createElement(
+            'div',
+            { 'class': 'carousel-inner', role: 'listbox' },
+            _react2.default.createElement(
+              'div',
+              { 'class': 'item active' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deserunt exercitationem facilis nisi officia reiciendis sequi voluptate voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro quaerat. Architecto, blanditiis.'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto aut delectus deserunt doloribus esse expedita fuga ipsam iusto labore neque, nulla quasi qui repellat rerum saepe veritatis voluptas.'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { 'class': 'item' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda deserunt exercitationem facilis nisi officia reiciendis sequi voluptate voluptatibus? Amet aspernatur cumque dolor id ipsam nam obcaecati porro quaerat. Architecto, blanditiis.'
+              ),
+              _react2.default.createElement(
+                'p',
+                null,
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid architecto aut delectus deserunt doloribus esse expedita fuga ipsam iusto labore neque, nulla quasi qui repellat rerum saepe veritatis voluptas.'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'footer',
+            null,
+            _react2.default.createElement(
+              'a',
+              { 'class': 'previous-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'prev' },
+              _react2.default.createElement('i', { 'class': 'fa fa-angle-left', 'aria-hidden': 'true' }),
+              _react2.default.createElement(
+                'span',
+                { 'class': 'sr-only' },
+                'Previous'
+              )
+            ),
+            _react2.default.createElement(
+              'a',
+              { 'class': 'next-slide', href: '#sub-carousel', role: 'button', 'data-slide': 'next' },
+              _react2.default.createElement('i', { 'class': 'fa fa-angle-right', 'aria-hidden': 'true' }),
+              _react2.default.createElement(
+                'span',
+                { 'class': 'sr-only' },
+                'Next'
+              )
+            )
+          )
         )
       );
     }
