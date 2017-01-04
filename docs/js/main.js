@@ -2193,6 +2193,15 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var jQuery = _jquery2.default; // needed for the bootstrap file
+
+// Load Bootstrap JS
+
+// Load jQuery
+
+
+// Load React
+
 },{"./bootstrap":1,"jquery":26,"react":180,"react-dom":29}],3:[function(require,module,exports){
 (function (process){
 'use strict';
