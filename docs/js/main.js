@@ -36,9 +36,19 @@ var Presentation = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'Presentation'
+        'div',
+        { className: 'container-fluid' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'Presentation'
+        ),
+        _react2.default.createElement(
+          'h2',
+          null,
+          'Example'
+        ),
+        _react2.default.createElement('div', { id: 'sub-carousel', className: 'carousel sub-carousel slide', 'data-ride': 'carousel' })
       );
     }
   }]);

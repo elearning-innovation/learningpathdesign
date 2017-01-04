@@ -4,7 +4,12 @@ import ReactDOM from 'react-dom'
 class Presentation extends React.Component {
   render() {
     return (
-      <h1>Presentation</h1>
+      <div className="container-fluid">
+        <h1>Presentation</h1>
+        <h2>Example</h2>
+        <div id="sub-carousel" className="carousel sub-carousel slide" data-ride="carousel">
+        </div>
+      </div>
     )
   }
 }
