@@ -63,6 +63,17 @@ $('.sub-topic-accordion .panel .panel-title a').each(function () {
     });
 });
 
+// Change active class on side sub-topic shell menu when the slide changes
+$('.sub-topic-carousel').find('.carousel').each(function() {
+        $(this).bind('slide.bs.carousel', function (e) {
+            if(!$(this).hasClass('sub-carousel')) {
+                console.log('test');
+                console.log($(this));
+            }
+        });
+});
+
+
 // Toggle the accordion in the accordion shell for Top-Level and Sub-Topic-Level
 $('.toggle').click(function (e) {
     e.preventDefault();
