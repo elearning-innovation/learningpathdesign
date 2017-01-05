@@ -97,6 +97,24 @@ blockquote {
   }
 }
 
+.page.top-level {
+  border-radius:5px;
+  border:1px solid $lightgray;
+  padding:0;
+}
+
+.navbar {
+  background: none;
+  border-radius: 0;
+  border:0;
+  border-bottom: 1px solid $orange;
+  box-shadow:none;
+}
+
+.sub-navbar {
+  margin-left: 15px;
+}
+
 section.block {
   margin-top: 15px;
 
