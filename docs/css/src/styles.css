@@ -1,0 +1,306 @@
+h1 {
+  font-size: 22pt;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
+
+h2 {
+  font-size: 18pt;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
+
+h3 {
+  font-size: 15pt;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
+
+h4 {
+  font-size: 13pt;
+  font-color: #666b74;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; }
+
+p {
+  font-size: 10pt;
+  font-color: #666b74;
+  line-spacing: 1.1em;
+  font-family: 'Lato', sans-serif;
+  clear: both; }
+
+hr {
+  font-size: 1pt; }
+
+.carousel-indicators {
+  display: none;
+  visibility: hidden; }
+
+blockquote {
+  border: 0;
+  padding-bottom: 10px; }
+  blockquote p {
+    margin-bottom: 10px;
+    border: 2px solid #fdb913;
+    border-left: 4px solid #fdb913;
+    width: 55%;
+    font-size: 10pt;
+    padding: 10px;
+    padding-left: 10px;
+    float: right; }
+    blockquote p .fa {
+      font-size: 30pt !important;
+      margin-right: 10px;
+      float: left; }
+  blockquote + p {
+    padding-top: 20px; }
+
+section.block {
+  margin-top: 15px;
+  border: 1px solid #a2c07c;
+  border-radius: 5px; }
+  section.block header {
+    background-color: #a2c07c;
+    padding: 0 10px;
+    height: 50px; }
+    section.block header h4 {
+      padding-top: 4pt;
+      text-align: center;
+      color: #ffffff;
+      margin: 0; }
+  section.block ul {
+    padding-left: 30px;
+    padding-top: 10px;
+    list-style-type: square; }
+    section.block ul li {
+      margin-bottom: 20px; }
+
+@media screen and (min-width: 992px) {
+  section.block {
+    margin-right: -15px !important;
+    border-radius: 5px 0 0 5px !important; } }
+.row.no-gutters {
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
+  .row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+    padding-right: 0 !important;
+    padding-left: 0 !important; }
+
+a:active {
+  font-color: #6ea3bb; }
+a:hover, a:visited {
+  font-color: #666b74; }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page .sub-carousel {
+  border: 1px solid #666b74;
+  padding: 0 !important; }
+  .page .sub-carousel header {
+    height: 40px;
+    background-color: #666b74;
+    color: #ffffff;
+    margin-bottom: 20px; }
+  .page .sub-carousel .carousel-inner {
+    padding: 10px; }
+  .page .sub-carousel footer {
+    text-align: center;
+    padding-top: 10px; }
+    .page .sub-carousel footer a {
+      text-decoration: none;
+      color: #999999; }
+      .page .sub-carousel footer a.previous-slide {
+        margin-right: 60px; }
+      .page .sub-carousel footer a i {
+        font-size: 2em; }
+.page aside .block h4 {
+  padding-top: 15px; }
+.page .carousel {
+  padding: 20px; }
+.page .carousel-control {
+  background: none; }
+  .page .carousel-control a {
+    position: fixed !important; }
+.page .tab-section .nav-tabs {
+  border-bottom: 0; }
+  .page .tab-section .nav-tabs li a {
+    background: #666b74;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0; }
+  .page .tab-section .nav-tabs li.active a {
+    background-color: #a2c07c !important; }
+.page.sub-topic {
+  margin-bottom: 20px; }
+.page aside .wrap, .page .main-content .wrap {
+  border: 1px solid #999999;
+  border-radius: 2px; }
+@media screen and (max-width: 991px) {
+  .page .nav-tabs li {
+    float: none; } }
+@media screen and (min-width: 992px) {
+  .page aside .wrap {
+    border-right: 0; } }
+.page aside .wrap {
+  padding-top: 15px !important;
+  border-top-right-radius: 0;
+  padding: 0;
+  margin-bottom: 10px; }
+  .page aside .wrap hr {
+    margin-left: 3px;
+    margin-right: 3px; }
+  .page aside .wrap ul {
+    padding-left: 0; }
+    .page aside .wrap ul li {
+      padding-left: 10px;
+      margin-bottom: 10px;
+      list-style-type: none; }
+      .page aside .wrap ul li.active {
+        background-color: #96c5d8;
+        padding-bottom: 5px;
+        padding-top: 5px; }
+        .page aside .wrap ul li.active a {
+          color: #000; }
+      .page aside .wrap ul li a {
+        color: #999999;
+        text-decoration: none; }
+.page .main-content .wrap {
+  border-top-left-radius: 0;
+  padding: 0 2px; }
+  .page .main-content .wrap header {
+    padding: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #999999; }
+  .page .main-content .wrap main {
+    margin-top: 5px;
+    min-height: 408px; }
+    .page .main-content .wrap main h2, .page .main-content .wrap main h3 {
+      color: #96c5d8; }
+.page.sub-topic-carousel footer {
+  border-top: 1px solid #999999;
+  min-height: 50px; }
+  .page.sub-topic-carousel footer nav {
+    float: right;
+    margin-top: 15px;
+    margin-right: 15px; }
+    .page.sub-topic-carousel footer nav a {
+      color: #999999;
+      display: block;
+      float: left; }
+      .page.sub-topic-carousel footer nav a.left {
+        border-right: 1px solid #999999;
+        padding-right: 5px;
+        margin-right: 5px; }
+      .page.sub-topic-carousel footer nav a i {
+        font-size: 10pt; }
+.page i.fa {
+  font-size: 14pt;
+  color: #999999; }
+.page header .navbar .navbar-brand img {
+  margin-top: -16px; }
+.page main {
+  margin-top: 10px; }
+  .page main .embed-responsive {
+    margin-bottom: 10px; }
+  .page main .sub-topics {
+    margin-top: 20px; }
+    .page main .sub-topics article {
+      color: #6ea3bb;
+      margin-bottom: 20px;
+      border: 1px solid #6ea3bb;
+      border-radius: 5px; }
+      .page main .sub-topics article header {
+        min-height: 50px;
+        padding: 3px;
+        margin: auto 2px; }
+      .page main .sub-topics article .body {
+        padding: 10px;
+        border-top: 1px solid #6ea3bb;
+        border-bottom: 1px solid #6ea3bb;
+        margin: auto 5px;
+        min-height: 100px; }
+      .page main .sub-topics article .body.withbackground {
+        border: 0;
+        margin: auto 0;
+        background-image: url(https://static1.squarespace.com/static/5446c540e4b05d7074088ef0/t/55e6dd7ce4b0c94c8af90ab9/1418734303957/Stockholm-Public-Library-Interior-2.jpg?format=1500w);
+        background-size: cover;
+        background-position: center;
+        color: #ffffff; }
+      .page main .sub-topics article footer {
+        text-align: right;
+        padding-top: 15px;
+        margin-left: 2px;
+        margin-right: 2px; }
+  .page main .btn-dashboard {
+    border-radius: 5px;
+    background: none;
+    background-color: #666b74;
+    color: #ffffff;
+    text-shadow: none;
+    border: 0;
+    height: 50px;
+    font-size: 1.1em; }
+  @media screen and (min-width: 992px) {
+    .page main .btn-dashboard {
+      margin-right: -15px;
+      border-radius: 5px 0 0 5px;
+      background: none;
+      background-color: #666b74;
+      color: #ffffff;
+      text-shadow: none;
+      border: 0;
+      height: 50px;
+      font-size: 1.1em; } }
+  .page main .btn-review {
+    border-radius: 5px 0 5px 0;
+    background: none;
+    background-color: #666b74;
+    color: #ffffff;
+    text-shadow: none;
+    border: 0;
+    height: 50px;
+    font-size: 1.1em;
+    margin-right: -3px;
+    margin-bottom: -1px;
+    width: 120px;
+    padding-top: 15px; }
+  .page main .btn-continue {
+    border-radius: 5px 0 5px 0;
+    background: none;
+    background-color: #6ea3bb;
+    color: #ffffff;
+    text-shadow: none;
+    border: 0;
+    height: 50px;
+    font-size: 1.1em;
+    margin-right: -3px;
+    margin-bottom: -1px;
+    width: 120px;
+    padding-top: 15px; }
+  .page main .btn-start {
+    border-radius: 5px 0 5px 0;
+    background: none;
+    background-color: #fdb913;
+    color: #ffffff;
+    text-shadow: none;
+    border: 0;
+    height: 50px;
+    font-size: 1.1em;
+    margin-right: -3px;
+    margin-bottom: -1px;
+    width: 120px;
+    padding-top: 15px; }
+  .page main .panel {
+    border: 0; }
+    .page main .panel .panel-heading {
+      border-radius: 0;
+      background: none; }
+      .page main .panel .panel-heading h4, .page main .panel .panel-heading h2 {
+        color: #ffffff; }
+      .page main .panel .panel-heading.collapsed {
+        background-color: #6ea3bb; }
+      .page main .panel .panel-heading.expanded {
+        background-color: #96c5d8; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,11 @@
 // Init
 $('.sub-topic').hide();
 
-// Events
+/**
+ * Events
+ */
+
+// Hide the top level shell and show the sub topic shell in question
 $('.sub-topics footer a').click(function (e) {
     e.preventDefault();
     var subtopic_container = "#" + $(this).data('subtopic');
@@ -9,18 +13,18 @@ $('.sub-topics footer a').click(function (e) {
     $(subtopic_container).fadeIn('slow');
 });
 
+// Hide sub-topics and show the top level shell
 $('.sub-topic .home').click(function (e) {
     e.preventDefault();
     $(this).closest('.sub-topic').fadeOut('slow');
     $('.top-level').fadeIn('slow');
 });
 
-// Code to toggle the hamburger menu
-
+// Hamburger Menu Toggle
 $('.side-menu-toggle').click(function (e) {
     e.preventDefault();
     var shell_container = $(this).closest('.container');
-    console.log('Side Menu');
+
     var sidemenu = $(shell_container).find('.side-menu');
     var maincontent = $(shell_container).find('.main-content');
 
@@ -37,6 +41,7 @@ $('.side-menu-toggle').click(function (e) {
     }
 });
 
+// Change active class on side sub-topic shell menu
 $('.sub-topic aside a').click(function () {
     $(this).parent().siblings().each(function () {
         $(this).removeClass('active');
@@ -44,6 +49,7 @@ $('.sub-topic aside a').click(function () {
     $(this).parent().addClass('active');
 });
 
+// Change active class on side sub-topic shell menu when accordion item is clicked
 $('.sub-topic-accordion .panel .panel-title a').each(function () {
     $(this).on('click', function () {
         var href = $(this).attr('href');
@@ -57,6 +63,7 @@ $('.sub-topic-accordion .panel .panel-title a').each(function () {
     });
 });
 
+// Toggle the accordion in the accordion shell for Top-Level and Sub-Topic-Level
 $('.toggle').on('click', function (e) {
     e.preventDefault();
     var shell_container = $(this).closest('.container');
@@ -79,6 +86,8 @@ $('.toggle').on('click', function (e) {
 
 // Set all the panel headings to the dark blue background
 togglePanelHeading();
+
+// Toggle the bright blue background for the active accordion panel heading
 function togglePanelHeading() {
     $('.panel-heading').addClass('collapsed');
     $('.collapse').prev().removeClass('expanded');

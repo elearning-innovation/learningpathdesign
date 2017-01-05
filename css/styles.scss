@@ -399,8 +399,7 @@ a {
         border-radius:5px;
       }
     }
-
-
+    
     .btn-dashboard {
       @include custombutton($darkgray, $white, 5px);
     }
