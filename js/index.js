@@ -64,12 +64,12 @@ $('.sub-topic-accordion .panel .panel-title a').each(function () {
 });
 
 // Toggle the accordion in the accordion shell for Top-Level and Sub-Topic-Level
-$('.toggle').on('click', function (e) {
+$('.toggle').click(function (e) {
     e.preventDefault();
     var shell_container = $(this).closest('.container');
     if ($(shell_container).find('.panel-group').hasClass('fully-expanded')) {
         $(shell_container).find('.panel-group').removeClass('fully-expanded');
-        $(shell_container).find('.panel-collapse').each(function () {
+        $(shell_container).find('.panel-collapse.in').each(function () {
             $(this).collapse('hide');
         });
         $(this).find('i').removeClass('fa-angle-double-up');
@@ -82,6 +82,7 @@ $('.toggle').on('click', function (e) {
         $(this).find('i').removeClass('fa-angle-double-down');
         $(this).find('i').addClass('fa-angle-double-up');
     }
+    console.log(e.target);
 });
 
 // Set all the panel headings to the dark blue background
