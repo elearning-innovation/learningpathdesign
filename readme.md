@@ -5,6 +5,9 @@ This documentation is in place to help learning path designers build out their d
 ## What are components and shells?
 A component is generally an encapsulated design feature such as an accordion, carousel, tabbed content or overview that can be copy/pasted into an area in a shell. Usually a component is used to present a topic. A shell is usually the design that houses a number of components and/or other html content/markup. A shell, usually to house a topics (1.1, 1.2, etc) many sub-topics (1.1.1, 1.2.4, etc). 
 
+## What do we start out with?
+You will start with an index.html skeleton file that will include the necessary css/js files to style and add functionality to the page. Also within the skeleton file is the Top-Level Shell that contains links to open the sub-topics.
+
 ## Replacing placeholders
 
 ### Topical Placeholders
