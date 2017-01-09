@@ -1,30 +1,45 @@
 h1 {
-  font-size: 22pt;
+  font-size: 1.7em;
   font-family: 'Lato', sans-serif;
   font-weight: 700; }
 
 h2 {
-  font-size: 18pt;
+  font-size: 1.4em;
   font-family: 'Lato', sans-serif;
   font-weight: 700; }
 
 h3 {
-  font-size: 15pt;
+  font-size: 1.2em;
   font-family: 'Lato', sans-serif;
   font-weight: 700; }
 
 h4 {
-  font-size: 13pt;
+  font-size: 1.1em;
   font-color: #666b74;
   font-family: 'Lato', sans-serif;
   font-weight: 700; }
 
 p {
-  font-size: 10pt;
+  font-size: 0.9em;
   font-color: #666b74;
   line-spacing: 1.1em;
   font-family: 'Lato', sans-serif;
   clear: both; }
+
+a:active {
+  color: #6ea3bb; }
+a:hover, a:visited {
+  color: #666b74; }
+
+.panel-title a {
+  text-decoration: none; }
+  .panel-title a i.fa {
+    color: #ffffff;
+    font-weight: bolder;
+    margin-right: 5px; }
+
+.navbar {
+  height: 73px; }
 
 hr {
   font-size: 1pt; }
@@ -53,10 +68,14 @@ blockquote {
     padding-top: 20px; }
 
 .page.top-level {
-  border-radius: 5px;
-  border: 1px solid #999999;
   padding: 0; }
 
+@media screen and (min-width: 992px) {
+  .page.top-level {
+    padding: 0; }
+    .page.top-level .panel-body {
+      padding-left: 75px;
+      padding-right: 75px; } }
 .navbar {
   background: none;
   border-radius: 0;
@@ -65,12 +84,39 @@ blockquote {
   box-shadow: none; }
 
 .sub-navbar {
-  margin-left: 15px; }
+  margin-left: 15px;
+  margin-bottom: 15px; }
+  .sub-navbar .course-name {
+    display: inline;
+    border-left: 1px solid #999999;
+    padding-top: -2px;
+    padding-left: 10px;
+    margin-left: 5px;
+    color: #6ea3bb; }
 
 section.block {
   margin-top: 15px;
   border: 1px solid #a2c07c;
   border-radius: 5px; }
+  section.block .block-body {
+    max-height: 300px;
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+    margin-right: 10px; }
+    section.block .block-body::-webkit-scrollbar {
+      -webkit-appearance: none; }
+    section.block .block-body::-webkit-scrollbar:vertical {
+      width: 11px; }
+    section.block .block-body::-webkit-scrollbar:horizontal {
+      height: 11px; }
+    section.block .block-body::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white;
+      /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, 0.5); }
+    section.block .block-body::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-radius: 8px; }
   section.block header {
     background-color: #a2c07c;
     padding: 0 10px;
@@ -87,17 +133,14 @@ section.block {
     section.block ul li {
       margin-bottom: 20px; }
 
-@media screen and (min-width: 992px) {
-  section.block {
-    margin-right: -15px !important;
-    border-radius: 5px 0 0 5px !important; } }
-.row.no-gutters {
-  margin-right: 0 !important;
-  margin-left: 0 !important; }
-  .row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
-    padding-right: 0 !important;
-    padding-left: 0 !important; }
+.row.no-gutters > [class^="col-"], .row.no-gutters > [class*=" col-"] {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
 
+@media screen and (max-width: 991px) {
+  .row.no-gutters {
+    margin-right: 0 !important;
+    margin-left: 0 !important; } }
 a:active {
   font-color: #6ea3bb; }
 a:hover, a:visited {
@@ -148,9 +191,15 @@ a:hover, a:visited {
     background-color: #a2c07c !important; }
 .page.sub-topic {
   margin-bottom: 20px; }
-.page aside .wrap, .page .main-content .wrap {
-  border: 1px solid #999999;
-  border-radius: 2px; }
+  @media screen and (min-width: 992px) {
+    .page.sub-topic .row {
+      border-bottom: 1px solid #999; } }
+.page .main-content .wrap {
+  border-left: 1px solid #999999; }
+@media screen and (max-width: 991px) {
+  .page aside .wrap, .page .main-content .wrap {
+    border: 1px solid #999999;
+    border-radius: 2px; } }
 @media screen and (max-width: 991px) {
   .page .nav-tabs li {
     float: none; } }
@@ -158,13 +207,14 @@ a:hover, a:visited {
   .page aside .wrap {
     border-right: 0; } }
 .page aside .wrap {
-  padding-top: 15px !important;
+  padding-top: 22px !important;
   border-top-right-radius: 0;
   padding: 0;
   margin-bottom: 10px; }
   .page aside .wrap hr {
     margin-left: 3px;
-    margin-right: 3px; }
+    margin-right: 2px;
+    border-top: 1px solid #999; }
   .page aside .wrap ul {
     padding-left: 0; }
     .page aside .wrap ul li {
@@ -187,6 +237,14 @@ a:hover, a:visited {
     padding: 10px;
     padding-bottom: 5px;
     border-bottom: 1px solid #999999; }
+    .page .main-content .wrap header h1 {
+      display: inline; }
+      .page .main-content .wrap header h1 span {
+        border-left: 1px solid #999999;
+        padding-top: -2px;
+        padding-left: 10px;
+        margin-left: 5px;
+        color: #6ea3bb; }
   .page .main-content .wrap main {
     margin-top: 5px;
     min-height: 408px; }
@@ -229,6 +287,8 @@ a:hover, a:visited {
         min-height: 50px;
         padding: 3px;
         margin: auto 2px; }
+        .page main .sub-topics article header h3 {
+          margin: 2px; }
       .page main .sub-topics article .body {
         padding: 10px;
         border-top: 1px solid #6ea3bb;
@@ -238,10 +298,11 @@ a:hover, a:visited {
       .page main .sub-topics article .body.withbackground {
         border: 0;
         margin: auto 0;
-        background-image: url(https://static1.squarespace.com/static/5446c540e4b05d7074088ef0/t/55e6dd7ce4b0c94c8af90ab9/1418734303957/Stockholm-Public-Library-Interior-2.jpg?format=1500w);
         background-size: cover;
         background-position: center;
         color: #ffffff; }
+      .page main .sub-topics article .withbackground {
+        background-image: url(https://static1.squarespace.com/static/5446c540e4b05d7074088ef0/t/55e6dd7ce4b0c94c8af90ab9/1418734303957/Stockholm-Public-Library-Interior-2.jpg?format=1500w); }
       .page main .sub-topics article footer {
         text-align: right;
         padding-top: 15px;
@@ -254,19 +315,8 @@ a:hover, a:visited {
     color: #ffffff;
     text-shadow: none;
     border: 0;
-    height: 50px;
+    height: 40px;
     font-size: 1.1em; }
-  @media screen and (min-width: 992px) {
-    .page main .btn-dashboard {
-      margin-right: -15px;
-      border-radius: 5px 0 0 5px;
-      background: none;
-      background-color: #666b74;
-      color: #ffffff;
-      text-shadow: none;
-      border: 0;
-      height: 50px;
-      font-size: 1.1em; } }
   .page main .btn-review {
     border-radius: 5px 0 5px 0;
     background: none;
@@ -274,12 +324,12 @@ a:hover, a:visited {
     color: #ffffff;
     text-shadow: none;
     border: 0;
-    height: 50px;
+    height: 40px;
     font-size: 1.1em;
     margin-right: -3px;
     margin-bottom: -1px;
     width: 120px;
-    padding-top: 15px; }
+    padding-top: 10px; }
   .page main .btn-continue {
     border-radius: 5px 0 5px 0;
     background: none;
@@ -287,12 +337,12 @@ a:hover, a:visited {
     color: #ffffff;
     text-shadow: none;
     border: 0;
-    height: 50px;
+    height: 40px;
     font-size: 1.1em;
     margin-right: -3px;
     margin-bottom: -1px;
     width: 120px;
-    padding-top: 15px; }
+    padding-top: 10px; }
   .page main .btn-start {
     border-radius: 5px 0 5px 0;
     background: none;
@@ -300,12 +350,12 @@ a:hover, a:visited {
     color: #ffffff;
     text-shadow: none;
     border: 0;
-    height: 50px;
+    height: 40px;
     font-size: 1.1em;
     margin-right: -3px;
     margin-bottom: -1px;
     width: 120px;
-    padding-top: 15px; }
+    padding-top: 10px; }
   .page main .panel {
     border: 0; }
     .page main .panel .panel-heading {

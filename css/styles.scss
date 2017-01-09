@@ -29,38 +29,62 @@ $white: #ffffff;
   color: $color;
   text-shadow: none;
   border:0;
-  height:50px;
+  height:40px;
   font-size:1.1em;
 }
 
 // Commence regular CSS
 h1 {
-  font-size: 22pt;
+  font-size: 1.7em;
   @include lato-bold();
 }
 
 h2 {
-  font-size: 18pt;
+  font-size: 1.4em;
   @include lato-bold();
 }
 
 h3 {
-  font-size: 15pt;
+  font-size: 1.2em;
   @include lato-bold();
 }
 
 h4 {
-  font-size: 13pt;
+  font-size: 1.1em;
   font-color: $darkgray;
   @include lato-bold();
 }
 
 p {
-  font-size: 10pt;
+  font-size: 0.9em;
   font-color: $darkgray;
   line-spacing: 1.1em;
   @include lato-medium();
   clear:both;
+}
+
+a {
+  &:active {
+    color: $darkblue;
+  }
+
+  &:hover, &:visited {
+    color:$darkgray;
+  }
+}
+
+.panel-title a {
+  text-decoration:none;
+
+  i.fa {
+    color:$white;
+    font-weight:bolder;
+    margin-right:5px;
+  }
+}
+
+.navbar {
+  height:73px;
 }
 
 hr {
@@ -98,9 +122,18 @@ blockquote {
 }
 
 .page.top-level {
-  border-radius:5px;
-  border:1px solid $lightgray;
   padding:0;
+}
+
+@media screen and (min-width: 992px) {
+  .page.top-level {
+    padding:0;
+
+    .panel-body {
+      padding-left:75px;
+      padding-right:75px;
+    }
+  }
 }
 
 .navbar {
@@ -113,6 +146,16 @@ blockquote {
 
 .sub-navbar {
   margin-left: 15px;
+  margin-bottom:15px;
+
+  .course-name {
+    display:inline;
+    border-left:1px solid $lightgray;
+    padding-top:-2px;
+    padding-left:10px;
+    margin-left:5px;
+    color:$darkblue;
+  }
 }
 
 section.block {
@@ -120,6 +163,37 @@ section.block {
 
   border: 1px solid $green;
   border-radius:5px;
+  .block-body {
+    max-height: 300px;
+    overflow: -moz-scrollbars-vertical;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-scrollbar:vertical {
+      width: 11px;
+    }
+
+    &::-webkit-scrollbar:horizontal {
+      height: 11px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid white; /* should match background, can't be transparent */
+      background-color: rgba(0, 0, 0, .5);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: #fff;
+      border-radius: 8px;
+    }
+
+    margin-right:10px;
+  }
+
   header {
     background-color: $green;
     padding: 0 10px;
@@ -144,22 +218,18 @@ section.block {
   }
 }
 
-@media screen and (min-width: 992px) {
-  section.block {
-    margin-right: -15px !important;
-    border-radius: 5px 0 0 5px !important;
-  }
-}
-
-
 .row.no-gutters {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-
   & > [class^="col-"],
   & > [class*=" col-"] {
     padding-right: 0 !important;
     padding-left: 0 !important;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .row.no-gutters {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -250,11 +320,23 @@ a {
 
   &.sub-topic {
     margin-bottom:20px;
+
+    @media screen and (min-width:992px) {
+      .row {
+        border-bottom:1px solid #999;
+      }
+    }
   }
 
-  aside .wrap, .main-content .wrap {
-    border: 1px solid $lightgray;
-    border-radius:2px;
+  .main-content .wrap {
+    border-left: 1px solid $lightgray;
+  }
+
+  @media screen and (max-width: 991px) {
+    aside .wrap, .main-content .wrap {
+      border: 1px solid $lightgray;
+      border-radius:2px;
+    }
   }
 
 
@@ -271,7 +353,7 @@ a {
   }
 
   aside .wrap {
-    padding-top:15px !important;
+    padding-top:22px !important;
 
     border-top-right-radius: 0;
     padding:0;
@@ -279,7 +361,8 @@ a {
 
     hr {
       margin-left:3px;
-      margin-right:3px;
+      margin-right:2px;
+      border-top:1px solid #999;
     }
 
     ul {
@@ -316,6 +399,18 @@ a {
       padding:10px;
       padding-bottom:5px;
       border-bottom:1px solid $lightgray;
+
+      h1 {
+        display: inline;
+
+        span {
+          border-left: 1px solid $lightgray;
+          padding-top: -2px;
+          padding-left: 10px;
+          margin-left: 5px;
+          color: $darkblue;
+        }
+      }
     }
 
     main {
@@ -386,6 +481,9 @@ a {
           min-height: 50px;
           padding: 3px;
           margin: auto 2px;
+          h3 {
+            margin:2px;
+          }
         }
         .body {
           padding:10px;
@@ -398,10 +496,14 @@ a {
         .body.withbackground {
           border:0;
           margin:auto 0;
-          background-image:url(https://static1.squarespace.com/static/5446c540e4b05d7074088ef0/t/55e6dd7ce4b0c94c8af90ab9/1418734303957/Stockholm-Public-Library-Interior-2.jpg?format=1500w);
           background-size: cover;
           background-position:center;
           color:$white;
+        }
+
+        //Set a background
+        .withbackground {
+          background-image:url(https://static1.squarespace.com/static/5446c540e4b05d7074088ef0/t/55e6dd7ce4b0c94c8af90ab9/1418734303957/Stockholm-Public-Library-Interior-2.jpg?format=1500w);
         }
 
         footer {
@@ -422,19 +524,12 @@ a {
       @include custombutton($darkgray, $white, 5px);
     }
 
-    @media screen and (min-width: 992px) {
-      .btn-dashboard {
-        margin-right: -15px;
-        @include custombutton($darkgray, $white, 5px 0 0 5px);
-      }
-    }
-
     .btn-review {
       @include custombutton($darkgray, $white, 5px 0 5px 0);
       margin-right:-3px;
       margin-bottom:-1px;
       width:120px;
-      padding-top:15px;
+      padding-top:10px;
     }
 
     .btn-continue {
@@ -442,7 +537,7 @@ a {
       margin-right:-3px;
       margin-bottom:-1px;
       width:120px;
-      padding-top:15px;
+      padding-top:10px;
     }
 
     .btn-start {
@@ -450,7 +545,7 @@ a {
       margin-right:-3px;
       margin-bottom:-1px;
       width:120px;
-      padding-top:15px;
+      padding-top:10px;
     }
 
 

@@ -137,6 +137,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
         <nav class="sub-navbar">
             <a href="" class="toggle"><i class="fa fa-angle-double-down toggle" aria-hidden="true"></i></a>
             <a href="http://www.moodle.com"><i class="fa fa-home home" aria-hidden="true"></i></a>
+            <h1 class="course-name">Biology 101</h1>
         </nav>
     </header>
 
@@ -146,12 +147,12 @@ There are three shells available. One Top-Level accordion view shell (this will 
             <!-- Copy this to create another accordion item/Topic -->
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="[[topicX]]-heading">
-                    <h4 class="panel-title">
+                    <h2 class="panel-title">
                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#[[topicX]]-collapse"
                            aria-expanded="true" aria-controls="[[topicX]]-collapse">
-                            Getting Started
+                            <i class="fa fa-angle-down" aria-hidden="true"></i> Getting Started
                         </a>
-                    </h4>
+                    </h2>
                 </div>
                 <div id="[[topicX]]-collapse" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="[[topicX]]-heading">
                     <div class="panel-body">
@@ -259,6 +260,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
                     <a href="#" class="side-menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
                     <a href="#" class="toggle"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
                     <a href="#" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <h1><span>Topic X</span><span>Topic X.Y</span></h1>
                 </header>
 
                 <main>
@@ -271,7 +273,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
                                     <a role="button" data-toggle="collapse" data-parent="#[[topicX-Y]]-accordion"
                                        href="#[[topicX-Y-Z]]-collapse" aria-expanded="true"
                                        aria-controls="[[topicX-Y-Z]]-collapse">
-                                        Collapsible Group Item #1
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i> Collapsible Group Item #1
                                     </a>
                                 </h2>
                             </div>
@@ -319,6 +321,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
                 <header>
                     <a href="" class="side-menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
                     <a href="" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <h1><span>Topic X</span><span>Topic X.Y</span></h1>
                 </header>
 
                 <main>
@@ -340,7 +343,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
                     <!-- Controls -->
                     <nav>
                         <a class="left" href="#[[topicX-Y]]-carousel" role="button" data-slide="prev">
-                            <i class="fa fa-chevron-left" aria-hidden="true"></i> Back
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i> Prev
                         </a>
                         <a class="right" href="#[[topicX-Y]]-carousel" role="button" data-slide="next">
                             Next <i class="fa fa-chevron-right" aria-hidden="true"></i>

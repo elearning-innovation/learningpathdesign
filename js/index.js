@@ -23,7 +23,7 @@ $('.sub-topic .home').click(function (e) {
 // Hamburger Menu Toggle
 $('.side-menu-toggle').click(function (e) {
     e.preventDefault();
-    var shell_container = $(this).closest('.container');
+    var shell_container = $(this).closest('.container-fluid');
 
     var sidemenu = $(shell_container).find('.side-menu');
     var maincontent = $(shell_container).find('.main-content');
@@ -54,7 +54,7 @@ $('.sub-topic-accordion .panel .panel-title a').each(function () {
     $(this).on('click', function () {
         var href = $(this).attr('href');
 
-        $(this).closest('.container').find('aside li').each(function () {
+        $(this).closest('.container-fluid').find('aside li').each(function () {
             $(this).removeClass('active');
             if ($(this).find('a').attr('href') == href) {
                 $(this).addClass('active');
@@ -77,10 +77,10 @@ $('.sub-topic-carousel').find('.carousel').each(function() {
 // Toggle the accordion in the accordion shell for Top-Level and Sub-Topic-Level
 $('.toggle').click(function (e) {
     e.preventDefault();
-    var shell_container = $(this).closest('.container');
+    var shell_container = $(this).closest('.container-fluid');
     if ($(shell_container).find('.panel-group').hasClass('fully-expanded')) {
         $(shell_container).find('.panel-group').removeClass('fully-expanded');
-        $(shell_container).find('.panel-collapse.in').each(function () {
+        $(shell_container).find('.panel-collapse').each(function () {
             $(this).collapse('hide');
         });
         $(this).find('i').removeClass('fa-angle-double-up');
@@ -88,7 +88,9 @@ $('.toggle').click(function (e) {
     } else {
         $(shell_container).find('.panel-group').addClass('fully-expanded');
         $(shell_container).find('.panel-collapse').each(function () {
-            $(this).collapse('show');
+
+                $(this).collapse('show');
+
         });
         $(this).find('i').removeClass('fa-angle-double-down');
         $(this).find('i').addClass('fa-angle-double-up');
@@ -96,16 +98,19 @@ $('.toggle').click(function (e) {
     console.log(e.target);
 });
 
-// Set all the panel headings to the dark blue background
-togglePanelHeading();
-
-// Toggle the bright blue background for the active accordion panel heading
-function togglePanelHeading() {
-    $('.panel-heading').addClass('collapsed');
-    $('.collapse').prev().removeClass('expanded');
-    $('.collapse.in').prev().addClass('expanded');
-}
+$('.collapse').prev().addClass('collapsed');
+$('.collapse.in').prev().addClass('expanded');
 
 $('.collapse').on('shown.bs.collapse', function () {
-    togglePanelHeading();
+    $(this).prev().addClass('expanded');
+    $(this).prev().removeClass('collapsed');
+    $(this).prev().find('i').addClass('fa-angle-down');
+    $(this).prev().find('i').removeClass('fa-angle-right');
+});
+
+$('.collapse').on('hidden.bs.collapse', function () {
+    $(this).prev().addClass('collapsed');
+    $(this).prev().removeClass('expanded');
+    $(this).prev().find('i').addClass('fa-angle-right');
+    $(this).prev().find('i').removeClass('fa-angle-down');
 });
