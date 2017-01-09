@@ -246,7 +246,8 @@ a:hover, a:visited {
         border-left: 1px solid #999999;
         padding-top: -2px;
         padding-left: 10px;
-        margin-left: 5px;
+        padding-right: 10px;
+        margin-left: 10px;
         color: #6ea3bb; }
   .page .main-content .wrap main {
     margin-top: 5px;
