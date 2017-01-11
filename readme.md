@@ -491,6 +491,35 @@ Components usually encapsulate content that represent sub-topics beneath sub-top
     </p>
 </blockquote>
 ```
+## Sub-Topic Block Background Styling
+If you want to add an image to a Sub-Topic block, you will need to add the "withbackground" and custom class (such as treestopic below)
+to the block like the example below:
+
+```html
+<!-- Copy this to create a new sub-topic link block -->
+<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    <article>
+        <header>Topic X.Y Should Wrap Here So It Should Work</header>
+        <div class="body withbackground treestopic">
+            <p>Text goes here. Yep, this is where we will describe a sub-topic</p>
+        </div>
+        <footer>
+            <a href="#" class="btn btn-default btn-review" data-subtopic="[[topicX-Y]]">Review</a>
+        </footer>
+    </article>
+</div>
+<!-- Paste the copied sub-topic link block below this comment -->
+```
+Then add a css entry for the custom class in the stylesheet file. (replace treestopic with whatever you are calling it).
+
+```css
+.treestopic {
+    background-image:url(images/yourimagehere.jpg);
+}
+```
+
+Replace yourimagehere.jpg with your filename for the image.
+
 
 ## Questions/Amendments?
 If you have any questions or amendments to this document and have access to edit this, please feel free. If you do not have access, please let an administrator know and we can change any mistakes or changes in the documentation. Thank You.
