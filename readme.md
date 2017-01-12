@@ -2,7 +2,7 @@
 This documentation is in place to help learning path designers build out their designs from the component shells and components available. 
 
 ## What do we start out with?
-You will start with an index.html skeleton file that will include the necessary css/js files to style and add functionality to the page. Also within the skeleton file is the Top-Level Shell that contains links to open the sub-topics.
+You will start with skeleton.html file that will include the necessary css/js files to style and add functionality to each page. DO NOT USE THIS PAGE AS A WORKING PAGE! This page is meant to be copied from and pasted into new html files. Normally you will want the index.html file to be your main file where the top-level shell goes.
 
 ## What are components and shells?
 A component is generally an encapsulated design feature such as an accordion, carousel, tabbed content or overview that can be copy/pasted into an area in a shell. Usually a component is used to present a topic. A shell is usually the design that houses a number of components and/or other html content/markup. A shell, usually to house a topics (1.1, 1.2, etc) many sub-topics (1.1.1, 1.2.4, etc). 
@@ -123,7 +123,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
 
 ```html
 <!-- Start of Top Level Topic -->
-<div class="container page top-level">
+<div class="container-fluid page top-level">
     <header>
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -213,12 +213,12 @@ There are three shells available. One Top-Level accordion view shell (this will 
                             <!-- Copy this to create a new sub-topic link block -->
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <article>
-                                    <header>Topic X.Y Should Wrap Here So It Should Work</header>
+                                    <header><h3>Topic X.Y Should Wrap Here So It Should Work</h3></header>
                                     <div class="body withbackground">
                                         <p>Text goes here. Yep, this is where we will describe a sub-topic</p>
                                     </div>
                                     <footer>
-                                        <a href="#" class="btn btn-default btn-review" data-subtopic="[[topicX-Y]]">Review</a>
+                                        <a href="<!-- HTML FILENAME HERE -->" class="btn btn-default btn-review">Review</a>
                                     </footer>
                                 </article>
                             </div>
@@ -240,7 +240,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
 
 ```html
 <!-- Start Sub Topic with Accordion Shell: Separates Sub-Topics -->
-<div class="container page sub-topic sub-topic-accordion" id="[[topicX-Y]]">
+<div class="container-fluid page sub-topic sub-topic-accordion" id="[[topicX-Y]]">
     <div class="row no-gutters">
         <aside class="side-menu col-eq col-md-3">
             <div class="wrap">
@@ -259,7 +259,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
                 <header>
                     <a href="#" class="side-menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
                     <a href="#" class="toggle"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
-                    <a href="#" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="<!-- HTML FILENAME HERE -->" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
                     <h1><span>Topic X</span><span>Topic X.Y</span></h1>
                 </header>
 
@@ -299,7 +299,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
 
 ```html
 <!-- Start Sub Topic with Carousel Shell: Separates Sub-Topics -->
-<div class="container page sub-topic sub-topic-carousel" id="[[topicX-Y]]">
+<div class="container-fluid page sub-topic sub-topic-carousel" id="[[topicX-Y]]">
     <div class="row no-gutters">
         <aside class="side-menu col-md-3">
             <div class="wrap">
@@ -320,7 +320,7 @@ There are three shells available. One Top-Level accordion view shell (this will 
             <div class="wrap">
                 <header>
                     <a href="" class="side-menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                    <a href="" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
+                    <a href="<!-- HTML FILENAME HERE -->" class="home"><i class="fa fa-home" aria-hidden="true"></i></a>
                     <h1><span>Topic X</span><span>Topic X.Y</span></h1>
                 </header>
 

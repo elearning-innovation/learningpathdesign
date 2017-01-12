@@ -1,25 +1,6 @@
-// Init
-$('.sub-topic').hide();
-
 /**
  * Events
  */
-
-// Hide the top level shell and show the sub topic shell in question
-$('.sub-topics footer a').click(function (e) {
-    e.preventDefault();
-    var subtopic_container = "#" + $(this).data('subtopic');
-    $('.top-level').fadeOut('slow');
-    $(subtopic_container).fadeIn('slow');
-});
-
-// Hide sub-topics and show the top level shell
-$('.sub-topic .home').click(function (e) {
-    e.preventDefault();
-    $(this).closest('.sub-topic').fadeOut('slow');
-    $('.top-level').fadeIn('slow');
-});
-
 // Hamburger Menu Toggle
 $('.side-menu-toggle').click(function (e) {
     e.preventDefault();
